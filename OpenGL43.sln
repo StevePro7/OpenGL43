@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F7DA46
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chap01", "Chap01", "{832829AA-DDB2-44A2-82CF-A374B2655AA1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Item", "Item\Item.vcxproj", "{630A26B9-1A70-4AF2-B194-0615D7100600}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj", "{630A26B9-1A70-4AF2-B194-0615D7100600}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header Files", "Header Files", "{57101ECE-98AF-4C12-8929-4BD28F7A6526}"
 	ProjectSection(SolutionItems) = preProject
