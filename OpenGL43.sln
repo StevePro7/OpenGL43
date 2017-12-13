@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header Files", "Header File
 		Common\CheckError.h = Common\CheckError.h
 		Common\LoadShaders.h = Common\LoadShaders.h
 		Common\vapp.h = Common\vapp.h
+		Common\vermilion.h = Common\vermilion.h
 		Common\vgl.h = Common\vgl.h
 	EndProjectSection
 EndProject

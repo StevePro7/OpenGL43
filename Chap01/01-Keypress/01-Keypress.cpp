@@ -4,7 +4,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////
 
+#include <vermilion.h>
+
 #include "vgl.h"
+#include "vapp.h"
 #include "LoadShaders.h"
 
 enum VAO_IDs { Triangles, NumVAOs };
@@ -16,14 +19,24 @@ GLuint  Buffers[NumBuffers];
 
 const GLuint  NumVertices = 6;
 
+BEGIN_APP_DECLARATION( KeyPressExample )
+virtual void Initialize( const char * title );
+virtual void Display( bool auto_redraw );
+virtual void Finalize( void );
+virtual void Resize( int width, int height );
+void OnKey( int key, int scancode, int action, int mods );
+END_APP_DECLARATION()
+
+DEFINE_APP( KeyPressExample, "Key Press Example" )
 //----------------------------------------------------------------------------
 //
 // init
 //
 
-void
-init( void )
+void KeyPressExample::Initialize( const char * title )
 {
+	base::Initialize( title );
+
 	glGenVertexArrays( NumVAOs, VAOs );
 	glBindVertexArray( VAOs[Triangles] );
 
@@ -32,14 +45,14 @@ init( void )
 		{ 0.90f, -0.85f }, { 0.90f, 0.90f }, { -0.85f, 0.90f }   // Triangle 2
 	};
 
-	glCreateBuffers( NumBuffers, Buffers );
+	glGenBuffers( NumBuffers, Buffers );
 	glBindBuffer( GL_ARRAY_BUFFER, Buffers[ArrayBuffer] );
-	glBufferStorage( GL_ARRAY_BUFFER, sizeof( vertices ), vertices, 0 );
+	glBufferData( GL_ARRAY_BUFFER, sizeof( vertices ),
+		vertices, GL_STATIC_DRAW );
 
-	ShaderInfo  shaders[] =
-	{
-		{ GL_VERTEX_SHADER, "media/shaders/triangles/triangles.vert" },
-		{ GL_FRAGMENT_SHADER, "media/shaders/triangles/triangles.frag" },
+	ShaderInfo  shaders[] = {
+		{ GL_VERTEX_SHADER, "media/shaders/keypress/keypress.vert" },
+		{ GL_FRAGMENT_SHADER, "media/shaders/keypress/keypress.frag" },
 		{ GL_NONE, NULL }
 	};
 
@@ -51,56 +64,47 @@ init( void )
 	glEnableVertexAttribArray( vPosition );
 }
 
+void KeyPressExample::OnKey( int key, int scancode, int action, int mods )
+{
+	if( action == GLFW_PRESS )
+	{
+		switch( key )
+		{
+		case GLFW_KEY_M:
+		{
+			static GLenum  mode = GL_FILL;
+
+			mode = (mode == GL_FILL ? GL_LINE : GL_FILL);
+			glPolygonMode( GL_FRONT_AND_BACK, mode );
+		}
+		return;
+		}
+	}
+
+	base::OnKey( key, scancode, action, mods );
+}
+
 //----------------------------------------------------------------------------
 //
 // display
 //
 
-void
-display( void )
+void KeyPressExample::Display( bool auto_redraw )
 {
-	static const float black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
-
-	glClearBufferfv( GL_COLOR, 0, black );
+	glClear( GL_COLOR_BUFFER_BIT );
 
 	glBindVertexArray( VAOs[Triangles] );
 	glDrawArrays( GL_TRIANGLES, 0, NumVertices );
+
+	base::Display( auto_redraw );
 }
 
-//----------------------------------------------------------------------------
-//
-// main
-//
-
-#ifdef _WIN32
-int CALLBACK WinMain(
-	_In_ HINSTANCE hInstance,
-	_In_ HINSTANCE hPrevInstance,
-	_In_ LPSTR     lpCmdLine,
-	_In_ int       nCmdShow
-)
-#else
-int
-main( int argc, char** argv )
-#endif
+void KeyPressExample::Resize( int width, int height )
 {
-	glfwInit();
+	glViewport( 0, 0, width, height );
+}
 
-	GLFWwindow* window = glfwCreateWindow( 800, 600, "Triangles", NULL, NULL );
+void KeyPressExample::Finalize( void )
+{
 
-	glfwMakeContextCurrent( window );
-	gl3wInit();
-
-	init();
-
-	while( !glfwWindowShouldClose( window ) )
-	{
-		display();
-		glfwSwapBuffers( window );
-		glfwPollEvents();
-	}
-
-	glfwDestroyWindow( window );
-
-	glfwTerminate();
 }
