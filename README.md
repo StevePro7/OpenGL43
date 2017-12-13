@@ -1,8 +1,16 @@
 # OpenGL43
 Examples for the OpenGL Red Book
 
+Add ChapXX folder
+Add ChapXX filter
+Copy Main to ChapXX folder
+Rename all Main* to whatever project is called e.g. 01-Triangles
+Add Existing Project to Solution
+Remove Main.cpp reference and re-add renamed cpp file e.g. 01-Triangles.cpp
+Right click newly added project
+Working Directory change default $(ProjectDir) to $(TargetDir)
+Build + Run
 
-Project properties
 
 DEBUG
 01.
