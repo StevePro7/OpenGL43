@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source Files", "Source File
 		Common\LoadShaders.cpp = Common\LoadShaders.cpp
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-Triangles", "Chap01\01-Triangles\Main.vcxproj", "{D947EAFF-F339-49C3-ABEF-B06F973B982C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -38,6 +40,14 @@ Global
 		{630A26B9-1A70-4AF2-B194-0615D7100600}.Release|x64.Build.0 = Release|x64
 		{630A26B9-1A70-4AF2-B194-0615D7100600}.Release|x86.ActiveCfg = Release|Win32
 		{630A26B9-1A70-4AF2-B194-0615D7100600}.Release|x86.Build.0 = Release|Win32
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Debug|x64.ActiveCfg = Debug|x64
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Debug|x64.Build.0 = Debug|x64
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Debug|x86.ActiveCfg = Debug|Win32
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Debug|x86.Build.0 = Debug|Win32
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Release|x64.ActiveCfg = Release|x64
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Release|x64.Build.0 = Release|x64
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Release|x86.ActiveCfg = Release|Win32
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +55,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{57101ECE-98AF-4C12-8929-4BD28F7A6526} = {F7DA4658-BA1C-45EF-B764-5CBABDAECC5D}
 		{486B6315-9C33-47AE-BE36-1A045E780F37} = {F7DA4658-BA1C-45EF-B764-5CBABDAECC5D}
+		{D947EAFF-F339-49C3-ABEF-B06F973B982C} = {832829AA-DDB2-44A2-82CF-A374B2655AA1}
 	EndGlobalSection
 EndGlobal
