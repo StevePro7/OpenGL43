@@ -3,8 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F7DA4658-BA1C-45EF-B764-5CBABDAECC5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chap01", "Chap01", "{832829AA-DDB2-44A2-82CF-A374B2655AA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inc", "Inc", "{540490AD-CA8A-4A19-B352-A4F38A6762BE}"
+	ProjectSection(SolutionItems) = preProject
+		Common\inc\CheckError.h = Common\inc\CheckError.h
+		Common\inc\LoadShaders.h = Common\inc\LoadShaders.h
+		Common\inc\vapp.h = Common\inc\vapp.h
+		Common\inc\vgl.h = Common\inc\vgl.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{91886DD7-8051-43DF-9BE7-954B11E008D4}"
+	ProjectSection(SolutionItems) = preProject
+		Common\src\gl3w.c = Common\src\gl3w.c
+		Common\src\LoadShaders.cpp = Common\src\LoadShaders.cpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{540490AD-CA8A-4A19-B352-A4F38A6762BE} = {F7DA4658-BA1C-45EF-B764-5CBABDAECC5D}
+		{91886DD7-8051-43DF-9BE7-954B11E008D4} = {F7DA4658-BA1C-45EF-B764-5CBABDAECC5D}
 	EndGlobalSection
 EndGlobal
