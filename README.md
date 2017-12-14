@@ -1,6 +1,9 @@
 # OpenGL43
 Examples for the OpenGL Red Book
 
+Download
+https://www.ics.uci.edu/~gopi/CS211B/opengl_programming_guide_8th_edition.pdf
+
 Add ChapXX folder
 Add ChapXX filter
 Copy Main to ChapXX folder
