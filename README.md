@@ -15,6 +15,11 @@ Working Directory change default $(ProjectDir) to $(TargetDir)
 Build + Run
 
 
+DON'T FORGET to include reference to vermillion_d.lib for Debug build configuration
+This way you are able to step through the source code for all Applications
+For Release build configuration simply use vermillion.lib as before
+
+
 DEBUG
 01.
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
