@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source Files", "Source Files", "{486B6315-9C33-47AE-BE36-1A045E780F37}"
 	ProjectSection(SolutionItems) = preProject
 		Common\LoadShaders.cpp = Common\LoadShaders.cpp
+		Common\vermilion.cpp = Common\vermilion.cpp
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-Triangles", "Chap01\01-Triangles\01-Triangles.vcxproj", "{D947EAFF-F339-49C3-ABEF-B06F973B982C}"
