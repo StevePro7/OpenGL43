@@ -11,14 +11,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header Files", "Header File
 	ProjectSection(SolutionItems) = preProject
 		Common\CheckError.h = Common\CheckError.h
 		Common\LoadShaders.h = Common\LoadShaders.h
+		Common\mat.h = Common\mat.h
 		Common\vapp.h = Common\vapp.h
+		Common\vbm.h = Common\vbm.h
+		Common\vec.h = Common\vec.h
 		Common\vermilion.h = Common\vermilion.h
 		Common\vgl.h = Common\vgl.h
+		Common\vmath.h = Common\vmath.h
+		Common\vutils.h = Common\vutils.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source Files", "Source Files", "{486B6315-9C33-47AE-BE36-1A045E780F37}"
 	ProjectSection(SolutionItems) = preProject
 		Common\LoadShaders.cpp = Common\LoadShaders.cpp
+		Common\loadtexture.cpp = Common\loadtexture.cpp
+		Common\targa.cpp = Common\targa.cpp
+		Common\vbm.cpp = Common\vbm.cpp
+		Common\vdds.cpp = Common\vdds.cpp
 		Common\vermilion.cpp = Common\vermilion.cpp
 	EndProjectSection
 EndProject
